@@ -7,7 +7,7 @@ rhc app create localjobs jbosseap mongodb-2.2
 
 2. Pull the source code from github
 ```
-git rm -rf src/pom.xml
+git rm -rf src/ pom.xml
 git commit -am "deleted default files"
 git remote add upstream -m master https://github.com/shekhargulati/localjobs-with-google-maps-and-directions-api.git
 git pull -s recursive -X theirs upstream master
