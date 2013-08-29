@@ -30,4 +30,12 @@ Run mongoimport command.
 cd app-root/data
 mongoimport -d localjobs -c jobs --file jobs-data.json -u $OPENSHIFT_MONGODB_DB_USERNAME -p $OPENSHIFT_MONGODB_DB_PASSWORD -h $OPENSHIFT_MONGODB_DB_HOST -port $OPENSHIFT_MONGODB_DB_PORT
 ```
+Run the mongo client
+```
+mongo
+> use localjobs
+switched to db localjobs
+> 
+> db.jobs.ensureIndex({"location":"2d"})
+```
 4. Push the code to OpenShift application gear
